@@ -1,0 +1,42 @@
+package assignment2;
+
+import java.util.Scanner;
+
+public class Assign2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner scan = new Scanner(System.in);
+        
+        int numItems, a;
+        System.out.print("Enter the number of items:");
+        a=scan.nextInt();
+        int[] items = new int [a];
+        System.out.print("Enter the value of all items (separated by space):");
+        for (int i = 0; i < items.length; ++i){
+            items[i]=scan.nextInt();  
+        }
+        for (int i = 0; i < items.length; ++i){
+            
+            System.out.print(i + ": ");
+            for (int star = 1; star <= items[i]; ++star){
+            
+                System.out.print("*");
+            
+            }
+            System.out.print("(" + items[i] + ")");
+            
+            System.out.print("\n");
+        }
+	}
+
+}
+
+OUTPUT
+Enter the number of items:5
+Enter the value of all items (separated by space):7 4 3 0 7
+0: *******(7)
+1: ****(4)
+2: ***(3)
+3: (0)
+4: *******(7)
